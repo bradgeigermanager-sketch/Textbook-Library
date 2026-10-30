@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reusable Visual Component Type",
+  "type": "object",
+  "required": [
+    "component_type_id",
+    "name",
+    "component_family"
+  ],
+  "properties": {
+    "component_type_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "component_family": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "ports_or_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "direction"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "input",
+              "output",
+              "bidirectional",
+              "attachment",
+              "spatial",
+              "unknown"
+            ]
+          },
+          "semantic_type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "value_type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value_type": {
+            "type": "string"
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "domain_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
