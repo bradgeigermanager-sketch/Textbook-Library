@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "STEM Resource Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "resource_id",
+    "title",
+    "resource_type",
+    "source",
+    "subjects",
+    "record_status"
+  ],
+  "properties": {
+    "resource_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resource_type": {
+      "enum": [
+        "textbook",
+        "textbook_companion",
+        "lecture_notes",
+        "reference_database",
+        "scientific_software",
+        "dataset",
+        "simulation",
+        "educational_material",
+        "educational_platform",
+        "study_notes_collection",
+        "laboratory_resource"
+      ]
+    },
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "canonical_url",
+        "source_kind"
+      ],
+      "properties": {
+        "canonical_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "repository_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "commit_sha": {
+          "type": "string"
+        },
+        "release_tag": {
+          "type": "string"
+        },
+        "source_kind": {
+          "enum": [
+            "github_repository",
+            "publisher_page",
+            "oer_platform",
+            "institutional_site",
+            "archive",
+            "other"
+          ]
+        },
+        "accessed_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "content_format": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "myst_markdown",
+          "jupyter_book",
+          "bookdown",
+          "rmarkdown",
+          "latex",
+          "pdf",
+          "markdown",
+          "jupyter_notebook",
+          "html",
+          "other"
+        ]
+      }
+    },
+    "license_assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "scope",
+          "status"
+        ],
+        "properties": {
+          "scope": {
+            "enum": [
+              "text",
+              "code",
+              "figures",
+              "datasets",
+              "notebooks",
+              "third_party_assets",
+              "whole_repository",
+              "unknown"
+            ]
+          },
+          "license_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "license_spdx_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "reported",
+              "conflicting",
+              "unknown",
+              "not_applicable"
+            ]
+          },
+          "evidence_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "record_status": {
+      "enum": [
+        "discovered",
+        "inspected",
+        "verified",
+        "needs_review",
+        "rejected",
+        "archived"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
