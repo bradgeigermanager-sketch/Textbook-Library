@@ -1,0 +1,350 @@
+{
+  "registry_version": "1.0.0",
+  "records": [
+    {
+      "resource_id": "modern-physics-quadrivium-press",
+      "title": "Modern Physics",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/QuadriviumPress/modernPhysics",
+        "repository_url": "https://github.com/QuadriviumPress/modernPhysics",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "physics",
+        "quantum-mechanics",
+        "nuclear-physics",
+        "particle-physics"
+      ],
+      "content_format": [
+        "myst_markdown"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Chapter-organized content on relativity, quantum, atomic/molecular, nuclear and particle physics. Text license reported CC BY-NC-SA 4.0; verify before reuse."
+      ]
+    },
+    {
+      "resource_id": "open-optimization-or-book",
+      "title": "Open Optimization",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/open-optimization/open-optimization-or-book",
+        "repository_url": "https://github.com/open-optimization/open-optimization-or-book",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "mathematics",
+        "optimization",
+        "operations-research"
+      ],
+      "content_format": [
+        "bookdown"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Linear/integer programming, modeling, algorithms and exercises. Text CC BY-SA 4.0 and code MIT reported; verify current files."
+      ]
+    },
+    {
+      "resource_id": "computational-seismology-notebooks",
+      "title": "Computational Seismology companion notebooks",
+      "resource_type": "textbook_companion",
+      "source": {
+        "canonical_url": "https://github.com/davofis/computational_seismology",
+        "repository_url": "https://github.com/davofis/computational_seismology",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "earth-sciences",
+        "geophysics",
+        "seismology",
+        "computational-sciences"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Companion to Heiner Igel's textbook. Reported GPL-3.0 for repository code; textbook license not established."
+      ]
+    },
+    {
+      "resource_id": "cfd-notebooks-nheri-simcenter",
+      "title": "CFD Notebooks",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/NHERI-SimCenter/CFD-Notebooks",
+        "repository_url": "https://github.com/NHERI-SimCenter/CFD-Notebooks",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "engineering",
+        "fluid-mechanics",
+        "computational-fluid-dynamics"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "OpenFOAM tutorials and exercises. BSD-2-Clause reported for code; assess third-party assets."
+      ]
+    },
+    {
+      "resource_id": "pymedphys",
+      "title": "PyMedPhys",
+      "resource_type": "scientific_software",
+      "source": {
+        "canonical_url": "https://github.com/pymedphys/pymedphys",
+        "repository_url": "https://github.com/pymedphys/pymedphys",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "medical-health-sciences",
+        "medical-physics",
+        "computational-sciences"
+      ],
+      "content_format": [
+        "other"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Medical physics Python software, not a textbook. Apache-2.0 reported."
+      ]
+    },
+    {
+      "resource_id": "quantum-mechanics-osscar",
+      "title": "Quantum Mechanics — OSSCAR notebooks",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/osscar-org/quantum-mechanics",
+        "repository_url": "https://github.com/osscar-org/quantum-mechanics",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "physics",
+        "quantum-mechanics",
+        "solid-state-physics"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Interactive quantum mechanics and materials notebooks. MIT reported."
+      ]
+    },
+    {
+      "resource_id": "materials-science-osscar",
+      "title": "Materials Science — OSSCAR notebooks",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/osscar-org/materials-science",
+        "repository_url": "https://github.com/osscar-org/materials-science",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "engineering",
+        "solid-state-physics"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "discovered",
+      "notes": [
+        "Course notebooks on crystal structures and materials fundamentals; license requires verification."
+      ]
+    },
+    {
+      "resource_id": "materials-thermodynamics-matscied",
+      "title": "Thermodynamics — MatSciEd notebooks",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/MatSciEd/Thermodynamics",
+        "repository_url": "https://github.com/MatSciEd/Thermodynamics",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "physics",
+        "thermodynamics",
+        "materials-engineering"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Phase diagrams, Gibbs free energy, spinodal decomposition and chemical thermodynamics. MIT reported."
+      ]
+    },
+    {
+      "resource_id": "pythia-foundations",
+      "title": "Pythia Foundations",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/ProjectPythia/pythia-foundations",
+        "repository_url": "https://github.com/ProjectPythia/pythia-foundations",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "computational-sciences",
+        "earth-sciences",
+        "environmental-sciences"
+      ],
+      "content_format": [
+        "jupyter_book"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Scientific Python and geoscience data workflows; Apache-2.0 reported. Not a dedicated climate textbook."
+      ]
+    },
+    {
+      "resource_id": "genetics-text-sucher",
+      "title": "Introductory Genetics (Bookdown)",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/nikolaussucher/genetics-text",
+        "repository_url": "https://github.com/nikolaussucher/genetics-text",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "biological-sciences",
+        "genetics",
+        "molecular-biology"
+      ],
+      "content_format": [
+        "bookdown"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Chapter-organized genetics OER; CC BY-SA 3.0 reported."
+      ]
+    },
+    {
+      "resource_id": "introduction-to-biology-generative-approach",
+      "title": "Introduction to Biology: A Generative Approach",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/docxology/biology_textbook",
+        "repository_url": "https://github.com/docxology/biology_textbook",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "biological-sciences",
+        "genetics",
+        "evolutionary-biology"
+      ],
+      "content_format": [
+        "markdown"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Prior discovery reports 44 chapters, labs, assessments, glossary and references. Manuscript CC BY 4.0 and code Apache-2.0 reported."
+      ]
+    },
+    {
+      "resource_id": "nwb4edu-neuroscience-textbook",
+      "title": "Neuroscience textbook — NWB4edu",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/nwb4edu/nwb4edu.github.io",
+        "repository_url": "https://github.com/nwb4edu/nwb4edu.github.io",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "biological-sciences",
+        "neuroscience",
+        "computational-sciences"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "inspected",
+      "notes": [
+        "Interactive neuroscience modules using NWB datasets; CC BY-SA 4.0 reported."
+      ]
+    },
+    {
+      "resource_id": "population-genetics-notes-cooplab",
+      "title": "Population and Quantitative Genetics Notes",
+      "resource_type": "lecture_notes",
+      "source": {
+        "canonical_url": "https://github.com/cooplab/popgen-notes",
+        "repository_url": "https://github.com/cooplab/popgen-notes",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "biological-sciences",
+        "genetics",
+        "population-genetics"
+      ],
+      "content_format": [
+        "other"
+      ],
+      "license_assertions": [],
+      "record_status": "discovered",
+      "notes": [
+        "License and current structure require verification."
+      ]
+    },
+    {
+      "resource_id": "biology-openstax-bundle",
+      "title": "OpenStax Biology collection",
+      "resource_type": "textbook",
+      "source": {
+        "canonical_url": "https://github.com/openstax/osbooks-biology-bundle",
+        "repository_url": "https://github.com/openstax/osbooks-biology-bundle",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "biological-sciences",
+        "genetics"
+      ],
+      "content_format": [
+        "other"
+      ],
+      "license_assertions": [],
+      "record_status": "discovered",
+      "notes": [
+        "Confirm per-title edition and exact license version."
+      ]
+    },
+    {
+      "resource_id": "uspas-accelerator-course-resources",
+      "title": "US Particle Accelerator School course repositories",
+      "resource_type": "educational_material",
+      "source": {
+        "canonical_url": "https://github.com/uspas",
+        "repository_url": "https://github.com/uspas",
+        "source_kind": "github_repository"
+      },
+      "subjects": [
+        "physics",
+        "accelerator-physics",
+        "engineering"
+      ],
+      "content_format": [
+        "jupyter_notebook"
+      ],
+      "license_assertions": [],
+      "record_status": "discovered",
+      "notes": [
+        "Organization-level discovery lead; split individual courses into separate records."
+      ]
+    }
+  ]
+}
