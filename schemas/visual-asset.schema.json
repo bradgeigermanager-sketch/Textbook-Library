@@ -216,7 +216,7 @@
         }
       }
     },
-    "related_visual_ids": {
+    "generalized_form_ids": {\n      "type": "array",\n      "items": { "type": "string" }\n    },\n    "related_visual_ids": {
       "type": "array",
       "items": {
         "type": "string"
