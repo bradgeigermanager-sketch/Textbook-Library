@@ -23,3 +23,7 @@ python scripts/validate_visual_forms.py
 
 ## Interpretation
 A high score means that the supplied extracted structure resembles a registered form. It is not proof of semantic identity. A low score can mean poor extraction, an absent form, or a different structure. Human review is required before a form is accepted or a new form is created. Future versions should support graph topology, spatial constraints, notation profiles, optional/required components, and evidence provenance.
+
+## Example
+
+A sample candidate is provided at `examples/visual-form-candidate.json`. Run it with the command above to inspect the ranked candidate forms and the evidence contributing to each score.
