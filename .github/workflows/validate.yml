@@ -18,7 +18,7 @@ jobs:
         run: python scripts/validate_registry.py
       - name: Validate generalized visual forms
         run: python scripts/validate_visual_forms.py
-      - name: Validate visual asset schema and records\n        run: python scripts/validate_visual_schemas.py\n      - name: Validate visual JSON schemas
+      - name: Validate visual JSON schemas
         run: python scripts/validate_visual_schemas.py
       - name: Smoke-test visual form matcher
         run: python scripts/visual_form_matcher.py examples/visual-form-candidate.json
