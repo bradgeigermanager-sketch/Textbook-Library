@@ -35,3 +35,7 @@ Initial registry scaffold. Catalog entries are discovery/inspection candidates, 
 ## Visual and diagram preservation
 
 Illustrations, diagrams, charts, maps, schematics, and scientific plots are first-class records, independent of equation extraction. See [visual ingestion](docs/VISUAL-INGESTION.md), [renderer strategy](docs/VISUAL-RENDERERS.md), and [visual reference scanner](docs/VISUAL-SCANNER.md). The scanner discovers source references; it does not execute or render untrusted source. Original visual assets must be preserved separately from machine-generated semantic interpretations.
+
+## Generalized visual forms
+
+The library now distinguishes visual families, generalized forms, specialized variants, reusable component types, relationship types, rendering templates, and individual visual instances. See [the generalized visual forms guide](docs/GENERALIZED-VISUAL-FORMS.md) and the seeded [forms](registry/visual-forms/forms.json), [components](registry/visual-forms/components.json), and [relationships](registry/visual-forms/relationships.json) registries.
