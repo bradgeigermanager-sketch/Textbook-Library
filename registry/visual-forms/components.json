@@ -1,0 +1,120 @@
+{
+  "version": "1.0.0",
+  "components": [
+    {
+      "component_type_id": "VC-NODE",
+      "name": "Entity or component node",
+      "component_family": "generic",
+      "aliases": [
+        "block",
+        "object"
+      ],
+      "description": "A distinct entity, part, stage, or conceptual unit depicted in a visual.",
+      "ports_or_anchors": [
+        {
+          "name": "connection",
+          "direction": "bidirectional",
+          "semantic_type": "relationship_endpoint"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "label",
+          "value_type": "string"
+        },
+        {
+          "name": "position",
+          "value_type": "coordinate"
+        }
+      ],
+      "domain_constraints": [],
+      "provenance": []
+    },
+    {
+      "component_type_id": "VC-ARROW",
+      "name": "Directed arrow",
+      "component_family": "connector",
+      "aliases": [
+        "vector arrow",
+        "transition arrow"
+      ],
+      "description": "A directional visual connector; semantic meaning must be classified rather than assumed.",
+      "ports_or_anchors": [
+        {
+          "name": "tail",
+          "direction": "output",
+          "semantic_type": "source"
+        },
+        {
+          "name": "head",
+          "direction": "input",
+          "semantic_type": "target"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "arrowhead",
+          "value_type": "enum"
+        },
+        {
+          "name": "label",
+          "value_type": "string"
+        }
+      ],
+      "domain_constraints": [],
+      "provenance": []
+    },
+    {
+      "component_type_id": "VC-AXIS",
+      "name": "Quantitative axis",
+      "component_family": "plot",
+      "aliases": [
+        "coordinate axis"
+      ],
+      "description": "A dimension with scale, units, ticks, and a mapped variable.",
+      "ports_or_anchors": [],
+      "attributes": [
+        {
+          "name": "variable",
+          "value_type": "string"
+        },
+        {
+          "name": "unit",
+          "value_type": "string"
+        },
+        {
+          "name": "scale",
+          "value_type": "enum"
+        },
+        {
+          "name": "range",
+          "value_type": "numeric_interval"
+        }
+      ],
+      "domain_constraints": [],
+      "provenance": []
+    },
+    {
+      "component_type_id": "VC-LEGEND",
+      "name": "Legend entry",
+      "component_family": "annotation",
+      "aliases": [
+        "key"
+      ],
+      "description": "Maps a visual symbol, color, line style, or marker to a meaning.",
+      "ports_or_anchors": [],
+      "attributes": [
+        {
+          "name": "symbol",
+          "value_type": "string"
+        },
+        {
+          "name": "meaning",
+          "value_type": "string"
+        }
+      ],
+      "domain_constraints": [],
+      "provenance": []
+    }
+  ]
+}
