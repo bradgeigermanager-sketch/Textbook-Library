@@ -114,7 +114,8 @@
         }
       ],
       "domain_constraints": [],
-      "provenance": []
+      "provenance": [],
+      "canonical_term": "legend"
     },
     {
       "component_type_id": "VC-PROCESS-STEP",
@@ -216,18 +217,6 @@
       "component_type_id": "VC-DATA-POINT",
       "canonical_term": "data_point",
       "name": "Data Point",
-      "component_family": "generalized_visual_element",
-      "aliases": [],
-      "description": "Canonical component vocabulary term used in one or more generalized visual-form signatures.",
-      "ports_or_anchors": [],
-      "attributes": [],
-      "domain_constraints": [],
-      "provenance": []
-    },
-    {
-      "component_type_id": "VC-LEGEND",
-      "canonical_term": "legend",
-      "name": "Legend",
       "component_family": "generalized_visual_element",
       "aliases": [],
       "description": "Canonical component vocabulary term used in one or more generalized visual-form signatures.",
