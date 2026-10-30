@@ -54,7 +54,8 @@
         "direction",
         "unit",
         "application_point"
-      ]
+      ],
+      "canonical_term": "acts_on"
     },
     {
       "relationship_type_id": "VR-MEASURES",
@@ -245,17 +246,6 @@
       "semantics": "Canonical relationship vocabulary term used in one or more generalized visual-form signatures.",
       "directed": true,
       "inverse_relationship": null,
-      "source_component_constraints": [],
-      "target_component_constraints": [],
-      "attributes": []
-    },
-    {
-      "relationship_type_id": "VR-ACTS-ON",
-      "canonical_term": "acts_on",
-      "name": "Acts On",
-      "semantics": "Canonical relationship vocabulary term used in one or more generalized visual-form signatures.",
-      "directed": true,
-      "inverse_relationship": "VR-ACTED-ON-BY",
       "source_component_constraints": [],
       "target_component_constraints": [],
       "attributes": []
