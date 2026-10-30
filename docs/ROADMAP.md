@@ -19,11 +19,12 @@ This roadmap is an implementation-oriented backlog. Status describes repository 
 ## Next implementation priorities
 
 ### P0 — Resolve and catalog actual visual assets
-- Resolve local image and vector references safely within source roots.
-- Preserve original bytes, calculate SHA-256, detect format and dimensions.
-- Distinguish embedded constructs (TikZ, Mermaid, Graphviz) from linked assets.
-- Emit visual-asset records and unresolved-reference reports.
-- Add tests for path traversal, missing files, extension inference, SVG parsing, and duplicate assets.
+- [x] Resolve local image and vector references safely within source roots.
+- [x] Hash source and asset bytes, detect supported formats and dimensions, and reject unsafe paths.
+- [x] Distinguish embedded constructs (TikZ, PSTricks, Mermaid, Graphviz) from linked assets without executing them.
+- [x] Emit schema-oriented visual-asset records and separate resolution reports.
+- [x] Add tests for path traversal, external references, PNG metadata, and embedded constructs.
+- [ ] Add broader image-format coverage, SVG edge cases, extension inference, and duplicate-asset detection.
 
 ### P1 — Connect textbook structure to visuals
 - Extract figure numbers, captions, labels, page references, and nearby explanatory text.
