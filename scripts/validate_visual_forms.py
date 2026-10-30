@@ -45,6 +45,14 @@ for label, records, key in [
         seen.add(identifier)
 
 form_ids = {item.get("form_id") for item in forms}
+component_terms = {item.get("canonical_term") for item in components if item.get("canonical_term")}
+relationship_ids = {item.get("relationship_type_id") for item in relationships}
+relationship_terms = {item.get("canonical_term") for item in relationships if item.get("canonical_term")}
+for index, relationship in enumerate(relationships):
+    inverse = relationship.get("inverse_relationship")
+    if inverse and inverse not in relationship_ids:
+        errors.append(f"relationships[{index}]: unknown inverse_relationship {inverse!r}")
+
 for index, form in enumerate(forms):
     if form.get("family_id") not in families:
         errors.append(f"forms[{index}]: unknown family_id {form.get('family_id')!r}")
@@ -52,6 +60,12 @@ for index, form in enumerate(forms):
     if parent and parent not in form_ids:
         errors.append(f"forms[{index}]: unknown parent_form_id {parent!r}")
     signature = form.get("structural_signature", {})
+    for term in signature.get("component_types", []):
+        if term not in component_terms:
+            errors.append(f"forms[{index}]: component type has no canonical vocabulary record: {term}")
+    for term in signature.get("relationship_types", []):
+        if term not in relationship_terms:
+            errors.append(f"forms[{index}]: relationship type has no canonical vocabulary record: {term}")
     if not signature.get("component_types"):
         errors.append(f"forms[{index}]: structural_signature.component_types is empty")
     if not signature.get("relationship_types"):
