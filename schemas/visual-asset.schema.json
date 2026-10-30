@@ -216,7 +216,13 @@
         }
       }
     },
-    "generalized_form_ids": {\n      "type": "array",\n      "items": { "type": "string" }\n    },\n    "related_visual_ids": {
+    "generalized_form_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_visual_ids": {
       "type": "array",
       "items": {
         "type": "string"
@@ -316,6 +322,72 @@
         "disputed",
         "rejected"
       ]
+    },
+    "resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reference_kind",
+        "original_target",
+        "resolver_version",
+        "warnings"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "resolved",
+            "resolved_extension_inferred",
+            "asset_not_found",
+            "empty_target",
+            "external_or_nonlocal_reference",
+            "empty_path",
+            "unsafe_path",
+            "unsafe_path_separator",
+            "path_escapes_source_root",
+            "embedded_source_construct",
+            "unsafe_source_path"
+          ]
+        },
+        "reference_kind": {
+          "type": "string"
+        },
+        "original_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resolved_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "byte_size": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "resolver_version": {
+          "type": "string"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
