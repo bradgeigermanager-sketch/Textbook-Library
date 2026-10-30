@@ -6,7 +6,7 @@ Run:
 
     python scripts/visual_reference_scanner.py ./book-source --edition-id example-edition-1 --output build/visual-references.json
 
-This produces a discovery queue, not a verified visual catalog. A later resolver must validate local targets, hash asset bytes, record dimensions, preserve vector originals, and associate captions and chapter context. No TeX, notebook, Mermaid, Graphviz, or build scripts are executed.
+This produces a discovery queue, not a verified visual catalog. The local resolver described below turns that queue into schema-oriented catalog candidates and a separate resolution report. Caption and chapter association remain subsequent enrichment steps. No TeX, notebook, Mermaid, Graphviz, or build scripts are executed.
 
 
 ## Resolve discovered references
