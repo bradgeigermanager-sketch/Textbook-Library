@@ -30,3 +30,8 @@ The repository's existing `LICENSE` is CC0 1.0. It applies only to contributions
 
 ## Status
 Initial registry scaffold. Catalog entries are discovery/inspection candidates, not legal or scientific certifications. See [Architecture](docs/ARCHITECTURE.md), [Ingestion](docs/INGESTION.md), [Licensing](docs/LICENSING.md), and [Contributing](CONTRIBUTING.md).
+
+
+## Visual and diagram preservation
+
+Illustrations, diagrams, charts, maps, schematics, and scientific plots are first-class records, independent of equation extraction. See [visual ingestion](docs/VISUAL-INGESTION.md), [renderer strategy](docs/VISUAL-RENDERERS.md), and [visual reference scanner](docs/VISUAL-SCANNER.md). The scanner discovers source references; it does not execute or render untrusted source. Original visual assets must be preserved separately from machine-generated semantic interpretations.
