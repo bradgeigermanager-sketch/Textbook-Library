@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bradgeigermanager-sketch.github.io/Textbook-Library/schemas/source-manifest.schema.json",
+  "title": "Source Snapshot Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_id",
+    "resource_id",
+    "source_uri",
+    "retrieved_at",
+    "source_kind",
+    "artifacts"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string"
+    },
+    "resource_id": {
+      "type": "string"
+    },
+    "edition_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_kind": {
+      "enum": [
+        "git_repository",
+        "archive",
+        "publisher",
+        "oer_platform",
+        "local_upload",
+        "other"
+      ]
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revision": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "branch_or_tag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "license_evidence_uri": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "byte_size",
+          "media_type"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "byte_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "detected_format": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "included": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "scanner_version": {
+      "type": "string"
+    }
+  }
+}
