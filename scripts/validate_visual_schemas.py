@@ -11,6 +11,7 @@ JOBS = [
     ("schemas/visual-form.schema.json", "registry/visual-forms/forms.json", "forms"),
     ("schemas/visual-component.schema.json", "registry/visual-forms/components.json", "components"),
     ("schemas/visual-relationship.schema.json", "registry/visual-forms/relationships.json", "relationships"),
+    ("schemas/visual-asset.schema.json", "examples/visual-asset-record.json", None),
 ]
 errors = []
 validated = 0
@@ -20,7 +21,10 @@ for schema_path, data_path, key in JOBS:
         data = json.loads((ROOT / data_path).read_text(encoding="utf-8"))
         Draft202012Validator.check_schema(schema)
         validator = Draft202012Validator(schema)
-        for index, record in enumerate(data.get(key, [])):
+        records = data if key is None else data.get(key, [])
+        if key is None:
+            records = [records]
+        for index, record in enumerate(records):
             for error in validator.iter_errors(record):
                 location = ".".join(str(part) for part in error.absolute_path)
                 errors.append(f"{data_path} {key}[{index}] {location}: {error.message}")
