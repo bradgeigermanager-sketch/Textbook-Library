@@ -497,6 +497,603 @@
       "form_status": "proposed",
       "confidence": 0.98,
       "provenance": []
+    },
+    {
+      "form_id": "VFORM-HISTOGRAM-001",
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Histogram",
+      "aliases": [],
+      "definition": "A quantitative display of a distribution using adjacent bins whose heights or areas encode frequency or density.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "statistics",
+        "physics",
+        "biology"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "bin",
+          "frequency_axis",
+          "bar"
+        ],
+        "relationship_types": [
+          "bin_maps_to_interval",
+          "bar_encodes_frequency"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "frequency",
+        "density",
+        "cumulative"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-PHASE-DIAGRAM-001",
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Thermodynamic or material phase diagram",
+      "aliases": [],
+      "definition": "A state-space plot partitioning regions by phase stability and boundaries representing transitions.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "thermodynamics",
+        "materials_science",
+        "chemistry"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "state_axis",
+          "phase_region",
+          "phase_boundary",
+          "critical_point"
+        ],
+        "relationship_types": [
+          "point_lies_in_region",
+          "boundary_separates_phases",
+          "transition_crosses_boundary"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "pressure_temperature",
+        "temperature_composition",
+        "ternary"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-VECTOR-FIELD-001",
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Vector field plot",
+      "aliases": [],
+      "definition": "A spatial domain populated by vectors encoding a direction and magnitude at sampled positions.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "physics",
+        "mathematics",
+        "engineering"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "spatial_grid",
+          "vector",
+          "coordinate_axis",
+          "color_scale"
+        ],
+        "relationship_types": [
+          "vector_attached_to_position",
+          "magnitude_encoded_by_length_or_color"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "2d",
+        "3d",
+        "streamline_overlay"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-RAY-OPTICS-001",
+      "family_id": "VIS-PHYSICAL",
+      "name": "Geometric ray diagram",
+      "aliases": [],
+      "definition": "A geometric representation of light or particle paths interacting with optical elements and interfaces.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "optics",
+        "physics",
+        "engineering"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "ray",
+          "optical_element",
+          "interface",
+          "focal_point",
+          "object",
+          "image"
+        ],
+        "relationship_types": [
+          "ray_intersects",
+          "ray_refracts_at",
+          "ray_reflects_at",
+          "converges_to"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "lens",
+        "mirror",
+        "multi_element"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-ENERGY-LEVEL-001",
+      "family_id": "VIS-PHYSICAL",
+      "name": "Energy-level diagram",
+      "aliases": [],
+      "definition": "A set of discrete or continuous energy states with transitions, populations, or allowed bands represented relative to an energy axis.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "atomic_physics",
+        "nuclear_physics",
+        "quantum_mechanics",
+        "chemistry"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "energy_level",
+          "energy_axis",
+          "transition_arrow",
+          "band",
+          "state_label"
+        ],
+        "relationship_types": [
+          "transition_between_levels",
+          "level_ordered_by_energy",
+          "state_belongs_to_band"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "atomic",
+        "molecular",
+        "band_structure",
+        "nuclear"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-PHYLOGENETIC-TREE-001",
+      "family_id": "VIS-BIOLOGICAL",
+      "name": "Phylogenetic tree",
+      "aliases": [],
+      "definition": "A branching representation of hypothesized evolutionary relationships among taxa or sequences.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "biology",
+        "genetics",
+        "evolution"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "taxon_tip",
+          "internal_node",
+          "branch",
+          "root"
+        ],
+        "relationship_types": [
+          "descends_from",
+          "shares_ancestor_with"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "rooted",
+        "unrooted",
+        "time_scaled",
+        "cladogram"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-GEO-CROSS-SECTION-001",
+      "family_id": "VIS-GEOLOGICAL",
+      "name": "Geological cross-section",
+      "aliases": [],
+      "definition": "A vertical slice through geological structures showing strata, faults, folds, intrusions, and surface topography.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "geology",
+        "geophysics",
+        "earth_sciences"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "stratum",
+          "fault",
+          "fold",
+          "intrusion",
+          "surface_profile",
+          "borehole"
+        ],
+        "relationship_types": [
+          "overlies",
+          "cuts_across",
+          "folds_into",
+          "terminates_against"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "structural",
+        "hydrogeological",
+        "seismic_interpretation"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-STRAT-COLUMN-001",
+      "family_id": "VIS-GEOLOGICAL",
+      "name": "Stratigraphic column",
+      "aliases": [],
+      "definition": "A vertically ordered representation of rock units and their lithology, thickness, age, and boundaries.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "geology",
+        "sedimentology",
+        "paleontology"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "stratigraphic_unit",
+          "age_marker",
+          "lithology_pattern",
+          "boundary"
+        ],
+        "relationship_types": [
+          "overlies",
+          "underlies",
+          "correlates_with"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "measured_section",
+        "composite_column",
+        "chronostratigraphic"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-TIMELINE-001",
+      "family_id": "VIS-CONCEPTUAL",
+      "name": "Timeline",
+      "aliases": [],
+      "definition": "An ordered representation of events or intervals positioned along a temporal axis.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "all_stem",
+        "history",
+        "project_management"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "time_axis",
+          "event",
+          "interval",
+          "milestone"
+        ],
+        "relationship_types": [
+          "occurs_before",
+          "overlaps_in_time",
+          "occurs_at"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "linear",
+        "multi_track",
+        "geological_time"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-STATE-MACHINE-001",
+      "family_id": "VIS-PROCESS",
+      "name": "State-transition diagram",
+      "aliases": [],
+      "definition": "A finite or extended set of states connected by transitions triggered by events or guarded conditions.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "computer_science",
+        "control_systems",
+        "biology",
+        "engineering"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "state",
+          "initial_state",
+          "final_state",
+          "transition",
+          "event",
+          "guard"
+        ],
+        "relationship_types": [
+          "transitions_to",
+          "triggered_by",
+          "guarded_by"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "finite_state",
+        "hierarchical_state",
+        "timed_state"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-SEQUENCE-DIAGRAM-001",
+      "family_id": "VIS-PROCESS",
+      "name": "Sequence or interaction diagram",
+      "aliases": [],
+      "definition": "An ordered interaction timeline showing messages or events exchanged among participants.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "computer_science",
+        "systems_engineering"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "participant",
+          "lifeline",
+          "message",
+          "activation",
+          "combined_fragment"
+        ],
+        "relationship_types": [
+          "sends_to",
+          "occurs_before",
+          "activates"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "synchronous",
+        "asynchronous",
+        "distributed"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-HEATMAP-001",
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Matrix heatmap",
+      "aliases": [],
+      "definition": "A two-dimensional matrix whose cells encode values through a visual scale.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "statistics",
+        "biology",
+        "materials_science",
+        "physics"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "row_category",
+          "column_category",
+          "cell",
+          "color_scale",
+          "legend"
+        ],
+        "relationship_types": [
+          "cell_intersects_row_and_column",
+          "cell_value_encoded_by_color"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "correlation",
+        "confusion_matrix",
+        "spatial_grid"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-ANATOMICAL-SECTION-001",
+      "family_id": "VIS-BIOLOGICAL",
+      "name": "Anatomical or specimen cross-section",
+      "aliases": [],
+      "definition": "A sectional view exposing internal structures along a defined cutting plane and orientation.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "anatomy",
+        "biology",
+        "medicine",
+        "materials_science"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "specimen_boundary",
+          "internal_region",
+          "cutting_plane",
+          "label_leader"
+        ],
+        "relationship_types": [
+          "region_contained_in",
+          "adjacent_to",
+          "intersects_section_plane"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the defining visual elements and preserve their domain-specific relationships."
+          }
+        ]
+      },
+      "parameters": [],
+      "variants": [
+        "transverse",
+        "sagittal",
+        "coronal",
+        "microstructure"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.9,
+      "provenance": []
     }
   ]
 }
