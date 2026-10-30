@@ -10,3 +10,4 @@ All schemas use JSON Schema Draft 2020-12. IDs are stable within their stated en
 
 - `visual-asset.schema.json`: illustration, figure, chart, and diagram asset.
 - `diagram-model.schema.json`: optional semantic graph representation of a diagram.
+- `visual-form.schema.json`: reusable generalized visual structure and constraints.\n- `visual-component.schema.json`: reusable visual component vocabulary.\n- `visual-relationship.schema.json`: typed relationships between visual components.\n
