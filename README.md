@@ -39,3 +39,7 @@ Illustrations, diagrams, charts, maps, schematics, and scientific plots are firs
 ## Generalized visual forms
 
 The library now distinguishes visual families, generalized forms, specialized variants, reusable component types, relationship types, rendering templates, and individual visual instances. See [the generalized visual forms guide](docs/GENERALIZED-VISUAL-FORMS.md) and the seeded [forms](registry/visual-forms/forms.json), [components](registry/visual-forms/components.json), and [relationships](registry/visual-forms/relationships.json) registries.
+
+## Visual form matching
+
+A transparent structural matcher ranks candidate generalized forms using component, relationship, and domain evidence. See [the matching guide](docs/VISUAL-FORM-MATCHING.md), [matcher script](scripts/visual_form_matcher.py), and [registry validator](scripts/validate_visual_forms.py). The form registry currently contains 21 proposed forms with a shared component and relationship vocabulary. These are candidate definitions, not approved scientific standards.
