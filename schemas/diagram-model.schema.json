@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Semantic Diagram Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "diagram_id",
+    "visual_id",
+    "diagram_kind",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "diagram_id": {
+      "type": "string"
+    },
+    "visual_id": {
+      "type": "string"
+    },
+    "diagram_kind": {
+      "enum": [
+        "flowchart",
+        "block_diagram",
+        "circuit",
+        "molecular_structure",
+        "reaction_pathway",
+        "anatomical_structure",
+        "apparatus",
+        "network",
+        "map",
+        "timeline",
+        "free_body",
+        "state_transition",
+        "concept_map",
+        "other"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "node_id",
+          "node_type",
+          "label"
+        ],
+        "properties": {
+          "node_id": {
+            "type": "string"
+          },
+          "node_type": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "entity_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geometry": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "attributes": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "edge_id",
+          "source_node_id",
+          "target_node_id",
+          "relationship"
+        ],
+        "properties": {
+          "edge_id": {
+            "type": "string"
+          },
+          "source_node_id": {
+            "type": "string"
+          },
+          "target_node_id": {
+            "type": "string"
+          },
+          "relationship": {
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "directed",
+              "undirected",
+              "bidirectional",
+              "unknown"
+            ]
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "attributes": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "legend": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "coordinate_system": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extraction_method": {
+      "enum": [
+        "native_source",
+        "svg_parse",
+        "ocr_vision",
+        "manual_annotation",
+        "inferred",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "machine_extracted",
+        "human_verified",
+        "disputed"
+      ]
+    }
+  }
+}
