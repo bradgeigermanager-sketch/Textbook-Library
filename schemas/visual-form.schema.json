@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generalized Visual Form",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "form_id",
+    "family_id",
+    "name",
+    "definition",
+    "structural_signature",
+    "form_status"
+  ],
+  "properties": {
+    "form_id": {
+      "type": "string"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "parent_form_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "definition": {
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "cross_disciplinary",
+        "discipline_specific",
+        "subdiscipline_specific",
+        "domain_specific"
+      ]
+    },
+    "applicable_domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "structural_signature": {
+      "type": "object",
+      "required": [
+        "component_types",
+        "relationship_types"
+      ],
+      "properties": {
+        "component_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relationship_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "constraint_type",
+              "description"
+            ],
+            "properties": {
+              "constraint_type": {
+                "enum": [
+                  "required_component",
+                  "optional_component",
+                  "cardinality",
+                  "ordering",
+                  "connectivity",
+                  "spatial",
+                  "directional",
+                  "measurement",
+                  "other"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "expression": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "parameter_id",
+          "name",
+          "value_type"
+        ],
+        "properties": {
+          "parameter_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "value_type": {
+            "type": "string"
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rendering_templates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "form_status": {
+      "enum": [
+        "proposed",
+        "reviewed",
+        "accepted",
+        "deprecated",
+        "disputed"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_type",
+          "source_ref"
+        ],
+        "properties": {
+          "source_type": {
+            "enum": [
+              "textbook_visual",
+              "standard",
+              "manual_definition",
+              "derived_analysis"
+            ]
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
