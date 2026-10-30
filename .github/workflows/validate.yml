@@ -1,7 +1,7 @@
 name: Validate registry
 on:
   push:
-    paths: ["registry/**", "schemas/**", "scripts/**", "tests/**", "requirements-dev.txt", ".github/workflows/validate.yml"]
+    paths: ["registry/**", "schemas/**", "scripts/**", "tests/**", "examples/**", "requirements-dev.txt", ".github/workflows/validate.yml"]
   pull_request:
     paths: ["registry/**", "schemas/**", "scripts/**", "tests/**", "requirements-dev.txt", ".github/workflows/validate.yml"]
 jobs:
