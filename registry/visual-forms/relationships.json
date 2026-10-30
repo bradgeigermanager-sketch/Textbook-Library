@@ -38,7 +38,8 @@
       "target_component_constraints": [],
       "attributes": [
         "part_whole_scope"
-      ]
+      ],
+      "canonical_term": "part_of"
     },
     {
       "relationship_type_id": "VR-ACTS-ON",
@@ -277,17 +278,6 @@
       "semantics": "Canonical relationship vocabulary term used in one or more generalized visual-form signatures.",
       "directed": true,
       "inverse_relationship": null,
-      "source_component_constraints": [],
-      "target_component_constraints": [],
-      "attributes": []
-    },
-    {
-      "relationship_type_id": "VR-PART-OF",
-      "canonical_term": "part_of",
-      "name": "Part Of",
-      "semantics": "Canonical relationship vocabulary term used in one or more generalized visual-form signatures.",
-      "directed": true,
-      "inverse_relationship": "VR-HAS-PART",
       "source_component_constraints": [],
       "target_component_constraints": [],
       "attributes": []
