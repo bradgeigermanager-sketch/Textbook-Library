@@ -72,6 +72,34 @@ def parse_file(path: Path, root: Path, edition_id: str, node_order: int):
         blocks.append(block)
         current_node["content_block_ids"].append(block_id)
         block_order += 1
+        if kind in ("paragraph", "list"):
+            for alt, target in IMAGE.findall(raw):
+                figure_id = stable_id(edition_id, rel, str(start), str(block_order), "figure", target)
+                figure = {"block_id": figure_id, "parent_node_id": current_node["node_id"],
+                          "block_type": "figure", "order": block_order,
+                          "text": None, "raw_source": f"![{alt}]({target})",
+                          "caption": alt or None,
+                          "source": {"path": rel, "line_start": start, "line_end": end,
+                                     "page": None, "anchor": None, "content_sha256": None},
+                          "extraction": {"method": "markdown_image_reference", "parser_name": "myst_adapter",
+                                         "parser_version": VERSION, "confidence": 0.9,
+                                         "warnings": ["Image target is referenced, not downloaded or verified"]},
+                          "image_target": target}
+                blocks.append(figure)
+                current_node["content_block_ids"].append(figure_id)
+                block_order += 1
+            for key in CITATION.findall(raw):
+                citation_id = stable_id(edition_id, rel, str(start), str(block_order), "citation", key)
+                citation = {"block_id": citation_id, "parent_node_id": current_node["node_id"],
+                            "block_type": "citation_marker", "order": block_order,
+                            "text": key, "raw_source": f"[@{key}]",
+                            "source": {"path": rel, "line_start": start, "line_end": end,
+                                       "page": None, "anchor": None, "content_sha256": None},
+                            "extraction": {"method": "myst_citation_key", "parser_name": "myst_adapter",
+                                           "parser_version": VERSION, "confidence": 0.9, "warnings": []}}
+                blocks.append(citation)
+                current_node["content_block_ids"].append(citation_id)
+                block_order += 1
 
     def flush(end):
         nonlocal paragraph
