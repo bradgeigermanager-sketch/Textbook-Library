@@ -1,0 +1,502 @@
+{
+  "version": "1.0.0",
+  "forms": [
+    {
+      "form_id": "VFORM-PROCESS-FLOW-001",
+      "family_id": "VIS-PROCESS",
+      "name": "Directed process flowchart",
+      "aliases": [
+        "process flow diagram",
+        "workflow diagram"
+      ],
+      "definition": "A sequence or branching arrangement of operations, decisions, inputs, and outputs connected by directed transitions.",
+      "scope": "cross_disciplinary",
+      "applicable_domains": [
+        "engineering",
+        "biology",
+        "chemistry",
+        "computer_science",
+        "operations_research"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "process_step",
+          "decision",
+          "input_output",
+          "connector"
+        ],
+        "relationship_types": [
+          "precedes",
+          "branches_to",
+          "merges_from",
+          "produces"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "At least two process or decision nodes"
+          },
+          {
+            "constraint_type": "directional",
+            "description": "Transitions indicate progression or dependency"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "direction",
+          "name": "flow_direction",
+          "value_type": "enum",
+          "required": true
+        }
+      ],
+      "variants": [
+        "linear_process",
+        "branching_process",
+        "swimlane_process"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "mermaid_flowchart",
+        "graphviz_digraph"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.99,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-NETWORK-NODE-EDGE-001",
+      "family_id": "VIS-NETWORK",
+      "name": "Node-edge network",
+      "aliases": [
+        "network graph",
+        "relationship graph"
+      ],
+      "definition": "A set of entities represented as nodes and relationships represented as edges.",
+      "scope": "cross_disciplinary",
+      "applicable_domains": [
+        "physics",
+        "biology",
+        "computer_science",
+        "chemistry",
+        "social_science"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "entity_node"
+        ],
+        "relationship_types": [
+          "connects_to",
+          "directed_relation"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "At least one node and one defined edge for a nontrivial network"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "directedness",
+          "name": "directedness",
+          "value_type": "enum",
+          "required": true
+        }
+      ],
+      "variants": [
+        "directed_graph",
+        "undirected_graph",
+        "weighted_graph",
+        "bipartite_graph"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "graphviz",
+        "network_json"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.99,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-QUANT-PLOT-XY-001",
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Cartesian x-y plot",
+      "aliases": [
+        "line plot",
+        "scatter plot"
+      ],
+      "definition": "A quantitative visual mapping one variable to a horizontal axis and another to a vertical axis.",
+      "scope": "cross_disciplinary",
+      "applicable_domains": [
+        "all_stem"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "x_axis",
+          "y_axis",
+          "data_series",
+          "data_point",
+          "legend",
+          "annotation"
+        ],
+        "relationship_types": [
+          "plotted_on_axis",
+          "belongs_to_series"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Axis variables, units where applicable, and data mapping must be identified"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "x_scale",
+          "name": "x_scale",
+          "value_type": "linear_or_log"
+        },
+        {
+          "parameter_id": "y_scale",
+          "name": "y_scale",
+          "value_type": "linear_or_log"
+        }
+      ],
+      "variants": [
+        "scatter",
+        "line",
+        "error_bar",
+        "log_linear",
+        "log_log"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "vega_lite",
+        "matplotlib"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.99,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-APPARATUS-001",
+      "family_id": "VIS-APPARATUS",
+      "name": "Experimental apparatus schematic",
+      "aliases": [
+        "experimental setup",
+        "instrumentation diagram"
+      ],
+      "definition": "A spatial or functional representation of equipment, samples, sensors, sources, and their physical or signal connections.",
+      "scope": "cross_disciplinary",
+      "applicable_domains": [
+        "physics",
+        "chemistry",
+        "biology",
+        "engineering",
+        "medical_physics"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "instrument",
+          "sample",
+          "source",
+          "detector",
+          "sensor",
+          "connection"
+        ],
+        "relationship_types": [
+          "physically_connected_to",
+          "measures",
+          "irradiates",
+          "contains",
+          "signal_flows_to"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Depict the relevant equipment and the functional or physical relationships under study"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "layout",
+          "name": "layout",
+          "value_type": "enum"
+        },
+        {
+          "parameter_id": "signal_direction",
+          "name": "signal_direction",
+          "value_type": "enum"
+        }
+      ],
+      "variants": [
+        "optical_bench",
+        "radiation_detector_setup",
+        "fluid_experiment",
+        "electrochemical_cell"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg",
+        "graphviz"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.98,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-CIRCUIT-SCHEMATIC-001",
+      "family_id": "VIS-ELECTRICAL",
+      "name": "Electrical circuit schematic",
+      "aliases": [
+        "circuit diagram"
+      ],
+      "definition": "A symbolic representation of electrical components and conductive connections, with optional polarity, reference labels, and measurement points.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "electrical_engineering",
+        "physics"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "resistor",
+          "capacitor",
+          "inductor",
+          "voltage_source",
+          "current_source",
+          "ground",
+          "switch",
+          "measurement_node"
+        ],
+        "relationship_types": [
+          "electrically_connected_to"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "connectivity",
+            "description": "Connections must define electrically meaningful nets"
+          },
+          {
+            "constraint_type": "required_component",
+            "description": "At least one source or externally defined excitation for an energized circuit"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "notation_standard",
+          "name": "notation_standard",
+          "value_type": "string"
+        }
+      ],
+      "variants": [
+        "series",
+        "parallel",
+        "series_parallel",
+        "ac",
+        "dc"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "circuitikz",
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.98,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-CHEM-REACTION-001",
+      "family_id": "VIS-CHEMICAL",
+      "name": "Chemical reaction scheme",
+      "aliases": [
+        "reaction pathway",
+        "reaction equation diagram"
+      ],
+      "definition": "A representation of reactants, products, intermediates, reagents, conditions, and directed transformation steps.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "chemistry",
+        "biochemistry",
+        "materials_science"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "reactant",
+          "product",
+          "intermediate",
+          "reagent",
+          "catalyst",
+          "condition"
+        ],
+        "relationship_types": [
+          "transforms_to",
+          "catalyzes",
+          "requires_condition"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "directional",
+            "description": "Transformation arrows indicate reaction direction or equilibrium"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "stoichiometry",
+          "name": "stoichiometry",
+          "value_type": "map"
+        }
+      ],
+      "variants": [
+        "single_step",
+        "multistep",
+        "equilibrium",
+        "catalytic_cycle"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "chemfig",
+        "svg"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.98,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-PHYS-FREEBODY-001",
+      "family_id": "VIS-PHYSICAL",
+      "name": "Free-body diagram",
+      "aliases": [
+        "force diagram"
+      ],
+      "definition": "An isolated body represented with external forces and moments applied at points or reference locations.",
+      "scope": "discipline_specific",
+      "applicable_domains": [
+        "classical_mechanics",
+        "engineering",
+        "statics",
+        "dynamics"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "body",
+          "force_vector",
+          "moment_vector",
+          "coordinate_axis",
+          "reaction_force"
+        ],
+        "relationship_types": [
+          "acts_on",
+          "applied_at",
+          "oriented_relative_to"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "Identify the isolated body and all forces relevant to the chosen system boundary"
+          },
+          {
+            "constraint_type": "directional",
+            "description": "Vectors require direction and magnitude or an explicitly symbolic magnitude"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "reference_frame",
+          "name": "reference_frame",
+          "value_type": "string"
+        },
+        {
+          "parameter_id": "units",
+          "name": "units",
+          "value_type": "string"
+        }
+      ],
+      "variants": [
+        "particle",
+        "rigid_body",
+        "2d",
+        "3d"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg",
+        "tikz"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.99,
+      "provenance": []
+    },
+    {
+      "form_id": "VFORM-BIO-STRUCTURE-001",
+      "family_id": "VIS-BIOLOGICAL",
+      "name": "Labeled biological structure illustration",
+      "aliases": [
+        "anatomical plate",
+        "cell structure diagram"
+      ],
+      "definition": "A depiction of a biological entity or specimen with named parts, regions, boundaries, and spatial relationships.",
+      "scope": "cross_disciplinary",
+      "applicable_domains": [
+        "biology",
+        "anatomy",
+        "neuroscience",
+        "medicine"
+      ],
+      "structural_signature": {
+        "component_types": [
+          "organism",
+          "organ",
+          "tissue",
+          "cell",
+          "organelle",
+          "region",
+          "label_leader"
+        ],
+        "relationship_types": [
+          "part_of",
+          "adjacent_to",
+          "contains",
+          "located_within"
+        ],
+        "constraints": [
+          {
+            "constraint_type": "required_component",
+            "description": "At least one biological structure and its associated labels or region definitions"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "parameter_id": "scale_level",
+          "name": "scale_level",
+          "value_type": "enum"
+        },
+        {
+          "parameter_id": "orientation",
+          "name": "orientation",
+          "value_type": "string"
+        }
+      ],
+      "variants": [
+        "anatomical_overview",
+        "cell_diagram",
+        "tissue_micrograph_annotation",
+        "exploded_structure"
+      ],
+      "examples": [],
+      "rendering_templates": [
+        "svg",
+        "annotated_raster"
+      ],
+      "form_status": "proposed",
+      "confidence": 0.98,
+      "provenance": []
+    }
+  ]
+}
