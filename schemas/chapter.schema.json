@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chapter and Section Node",
+  "type": "object",
+  "required": [
+    "node_id",
+    "edition_id",
+    "node_type",
+    "title",
+    "order"
+  ],
+  "properties": {
+    "node_id": {
+      "type": "string"
+    },
+    "edition_id": {
+      "type": "string"
+    },
+    "parent_node_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "node_type": {
+      "enum": [
+        "part",
+        "chapter",
+        "section",
+        "subsection",
+        "appendix",
+        "preface",
+        "glossary",
+        "references",
+        "index",
+        "front_matter",
+        "back_matter"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_anchor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_line_start": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "source_line_end": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "source_page_start": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "source_page_end": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content_block_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
