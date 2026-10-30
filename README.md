@@ -45,3 +45,8 @@ The library now distinguishes visual families, generalized forms, specialized va
 ## Visual form matching
 
 A transparent structural matcher ranks candidate generalized forms using component, relationship, and domain evidence. See [the matching guide](docs/VISUAL-FORM-MATCHING.md), [matcher script](scripts/visual_form_matcher.py), and [registry validator](scripts/validate_visual_forms.py). The form registry currently contains 21 proposed forms with a shared component and relationship vocabulary. These are candidate definitions, not approved scientific standards.
+
+
+## Visual asset resolution
+
+The visual pipeline now includes a safe local resolver: [implementation](scripts/visual_asset_resolver.py), [tests](tests/test_visual_asset_resolver.py), and [usage guide](docs/VISUAL-SCANNER.md). It creates catalog candidates and a separate resolution report without fetching remote targets or executing embedded diagram languages.
