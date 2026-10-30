@@ -1,0 +1,153 @@
+{
+  "taxonomy_id": "stem-subject-taxonomy",
+  "version": "1.0.0",
+  "domains": [
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "disciplines": [
+        "algebra",
+        "analysis",
+        "geometry",
+        "discrete-mathematics",
+        "probability",
+        "statistics",
+        "numerical-analysis",
+        "optimization"
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "Physics",
+      "disciplines": [
+        "classical-mechanics",
+        "electromagnetism",
+        "thermodynamics",
+        "statistical-mechanics",
+        "quantum-mechanics",
+        "relativity",
+        "nuclear-physics",
+        "particle-physics",
+        "accelerator-physics",
+        "solid-state-physics",
+        "optics",
+        "astrophysics"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "disciplines": [
+        "general-chemistry",
+        "organic-chemistry",
+        "inorganic-chemistry",
+        "physical-chemistry",
+        "analytical-chemistry",
+        "radiation-chemistry",
+        "biochemistry"
+      ]
+    },
+    {
+      "id": "biological-sciences",
+      "label": "Biological Sciences",
+      "disciplines": [
+        "cell-biology",
+        "molecular-biology",
+        "genetics",
+        "population-genetics",
+        "evolutionary-biology",
+        "microbiology",
+        "neuroscience",
+        "biotechnology",
+        "radiobiology"
+      ]
+    },
+    {
+      "id": "medical-health-sciences",
+      "label": "Medical and Health Sciences",
+      "disciplines": [
+        "medical-physics",
+        "medical-imaging",
+        "radiation-therapy",
+        "radiation-protection",
+        "pharmacology",
+        "toxicology"
+      ]
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "disciplines": [
+        "electrical-engineering",
+        "electronics",
+        "mechanical-engineering",
+        "aerospace-engineering",
+        "chemical-engineering",
+        "materials-engineering",
+        "nuclear-engineering",
+        "fluid-mechanics",
+        "computational-fluid-dynamics",
+        "systems-engineering"
+      ]
+    },
+    {
+      "id": "earth-sciences",
+      "label": "Earth Sciences",
+      "disciplines": [
+        "geophysics",
+        "seismology",
+        "geology",
+        "oceanography",
+        "meteorology"
+      ]
+    },
+    {
+      "id": "environmental-sciences",
+      "label": "Environmental Sciences",
+      "disciplines": [
+        "climate-science",
+        "environmental-modelling",
+        "ecology",
+        "environmental-data-science"
+      ]
+    },
+    {
+      "id": "computational-sciences",
+      "label": "Computational Sciences",
+      "disciplines": [
+        "scientific-computing",
+        "computational-physics",
+        "computational-chemistry",
+        "computational-biology",
+        "scientific-python",
+        "high-performance-computing",
+        "machine-learning"
+      ]
+    },
+    {
+      "id": "systems-decision-sciences",
+      "label": "Systems and Decision Sciences",
+      "disciplines": [
+        "operations-research",
+        "mathematical-optimization",
+        "decision-analysis",
+        "simulation",
+        "systems-modelling"
+      ]
+    }
+  ],
+  "relationship_types": [
+    "IS_SUBJECT_OF",
+    "HAS_SUBJECT",
+    "IS_SUBDISCIPLINE_OF",
+    "RELATED_TO",
+    "OVERLAPS_WITH",
+    "DEPENDS_ON",
+    "APPLIES_METHODS_FROM",
+    "USES_TECHNIQUES_FROM",
+    "SHARES_CONCEPTS_WITH",
+    "SHARES_EQUATIONS_WITH",
+    "CONTRIBUTES_TO",
+    "DISTINCT_FROM"
+  ]
+}
