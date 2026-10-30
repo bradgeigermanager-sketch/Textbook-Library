@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Textbook Visual Asset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "visual_id",
+    "edition_id",
+    "visual_type",
+    "source",
+    "asset",
+    "instructional_role",
+    "review_status"
+  ],
+  "properties": {
+    "visual_id": {
+      "type": "string"
+    },
+    "edition_id": {
+      "type": "string"
+    },
+    "parent_node_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "caption": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "figure_number": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visual_type": {
+      "enum": [
+        "illustration",
+        "diagram",
+        "plot",
+        "chart",
+        "graph",
+        "map",
+        "schematic",
+        "photograph",
+        "micrograph",
+        "anatomical_plate",
+        "apparatus",
+        "infographic",
+        "workflow",
+        "flowchart",
+        "concept_map",
+        "reaction_scheme",
+        "circuit_diagram",
+        "free_body_diagram",
+        "phase_diagram",
+        "spectrogram",
+        "other",
+        "unknown"
+      ]
+    },
+    "instructional_role": {
+      "enum": [
+        "explanation",
+        "overview",
+        "comparison",
+        "classification",
+        "process",
+        "structure",
+        "spatial_orientation",
+        "quantitative_data",
+        "experimental_setup",
+        "worked_example",
+        "warning",
+        "historical_context",
+        "decoration",
+        "unknown"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "path"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "anchor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "page": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "line_start": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "line_end": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "source_uri": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "media_type"
+      ],
+      "properties": {
+        "media_type": {
+          "type": "string"
+        },
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width_px": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "height_px": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "vector": {
+          "type": "boolean"
+        },
+        "embedded": {
+          "type": "boolean"
+        },
+        "alt_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "storage_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rendered_preview_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "entity_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "region": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "related_visual_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "related_block_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "concept_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "citation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "alt_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "long_description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_by_human": {
+          "type": "boolean"
+        },
+        "ocr_status": {
+          "enum": [
+            "not_run",
+            "complete",
+            "partial",
+            "failed",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "rendering": {
+      "type": "object",
+      "properties": {
+        "native_renderer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fallback_renderer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "render_status": {
+          "enum": [
+            "native",
+            "fallback",
+            "source_only",
+            "failed",
+            "not_required",
+            "unknown"
+          ]
+        },
+        "render_warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "machine_classified",
+        "human_verified",
+        "disputed",
+        "rejected"
+      ]
+    }
+  }
+}
