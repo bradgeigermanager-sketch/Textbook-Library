@@ -1,0 +1,62 @@
+{
+  "visual_id": "visual-example-001",
+  "edition_id": "example-edition-001",
+  "parent_node_id": null,
+  "caption": "Example diagram caption",
+  "figure_number": "1.1",
+  "title": "Example visual",
+  "visual_type": "diagram",
+  "instructional_role": "explanation",
+  "source": {
+    "path": "chapter-01.md",
+    "anchor": null,
+    "page": null,
+    "line_start": 12,
+    "line_end": 12,
+    "source_uri": null,
+    "source_sha256": null
+  },
+  "asset": {
+    "media_type": "image/svg+xml",
+    "format": "svg",
+    "width_px": 640,
+    "height_px": 480,
+    "vector": true,
+    "embedded": false,
+    "alt_text": "A simple illustrative diagram",
+    "storage_path": "figures/example.svg",
+    "rendered_preview_path": null
+  },
+  "labels": [],
+  "generalized_form_ids": [
+    "VFORM-PROCESS-FLOW-001"
+  ],
+  "related_visual_ids": [],
+  "related_block_ids": [],
+  "concept_ids": [],
+  "citation_ids": [],
+  "description": null,
+  "accessibility": {
+    "alt_text": "A simple illustrative diagram",
+    "long_description": null,
+    "reviewed_by_human": false,
+    "ocr_status": "not_run"
+  },
+  "rendering": {
+    "native_renderer": null,
+    "fallback_renderer": null,
+    "render_status": "unknown",
+    "render_warnings": []
+  },
+  "review_status": "unreviewed",
+  "resolution": {
+    "status": "resolved",
+    "reference_kind": "markdown_image",
+    "original_target": "figures/example.svg",
+    "resolved_path": "figures/example.svg",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "byte_size": 1024,
+    "resolver_version": "0.1.0",
+    "warnings": []
+  }
+}
