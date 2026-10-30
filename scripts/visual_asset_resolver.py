@@ -122,7 +122,17 @@ def resolve(root, source_rel, target):
     if error:
         return None, error
     source_dir = (root / source_rel).parent
-    candidate = (source_dir / relative).resolve(strict=False)
+    candidate_lexical = source_dir / relative
+    try:
+        candidate_lexical.relative_to(root)
+    except ValueError:
+        return None, "path_escapes_source_root"
+    current = root
+    for part in candidate_lexical.relative_to(root).parts:
+        current = current / part
+        if current.is_symlink():
+            return None, "unsafe_path"
+    candidate = candidate_lexical.resolve(strict=False)
     try:
         candidate.relative_to(root)
     except ValueError:
@@ -150,13 +160,30 @@ def main():
     for item in discoveries:
         kind = item.get("reference_kind", "unknown")
         source_rel = item.get("source_path", "")
-        source_file = (root / source_rel).resolve(strict=False)
+        source_lexical = root / source_rel
+        try:
+            source_lexical.relative_to(root)
+        except ValueError:
+            report.append({"visual_id": item.get("visual_id"), "status": "unsafe_source_path"})
+            continue
+        relative_parts = source_lexical.relative_to(root).parts
+        current = root
+        unsafe_source = False
+        for part in relative_parts:
+            current = current / part
+            if current.is_symlink():
+                unsafe_source = True
+                break
+        if unsafe_source:
+            report.append({"visual_id": item.get("visual_id"), "status": "unsafe_source_path"})
+            continue
+        source_file = source_lexical.resolve(strict=False)
         try:
             source_file.relative_to(root)
         except ValueError:
             report.append({"visual_id": item.get("visual_id"), "status": "unsafe_source_path"})
             continue
-        source_hash = digest(source_file) if source_file.is_file() and not source_file.is_symlink() else None
+        source_hash = digest(source_file) if source_file.is_file() else None
         target = item.get("target")
         embedded = kind in EMBEDDED_KINDS
         resolved_path, status = (None, "embedded_source_construct") if embedded else resolve(root, source_rel, target)
