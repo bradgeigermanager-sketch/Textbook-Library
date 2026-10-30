@@ -7,3 +7,6 @@
 - `content-block.schema.json`: typed extracted content.
 - `ingestion-run.schema.json`: reproducible parser execution.
 All schemas use JSON Schema Draft 2020-12. IDs are stable within their stated entity scope; provenance links must not be discarded during normalization.
+
+- `visual-asset.schema.json`: illustration, figure, chart, and diagram asset.
+- `diagram-model.schema.json`: optional semantic graph representation of a diagram.
