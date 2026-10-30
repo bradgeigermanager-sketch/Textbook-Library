@@ -19,7 +19,14 @@
       "content_format": [
         "myst_markdown"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "text",
+          "license_name": "CC BY-NC-SA 4.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Chapter-organized content on relativity, quantum, atomic/molecular, nuclear and particle physics. Text license reported CC BY-NC-SA 4.0; verify before reuse."
@@ -42,7 +49,20 @@
       "content_format": [
         "bookdown"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "text",
+          "license_name": "CC BY-SA 4.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        },
+        {
+          "scope": "code",
+          "license_name": "MIT",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Linear/integer programming, modeling, algorithms and exercises. Text CC BY-SA 4.0 and code MIT reported; verify current files."
@@ -66,7 +86,14 @@
       "content_format": [
         "jupyter_notebook"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "GPL-3.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Companion to Heiner Igel's textbook. Reported GPL-3.0 for repository code; textbook license not established."
@@ -89,7 +116,14 @@
       "content_format": [
         "jupyter_notebook"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "BSD-2-Clause",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "OpenFOAM tutorials and exercises. BSD-2-Clause reported for code; assess third-party assets."
@@ -112,7 +146,14 @@
       "content_format": [
         "other"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "Apache-2.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Medical physics Python software, not a textbook. Apache-2.0 reported."
@@ -135,7 +176,14 @@
       "content_format": [
         "jupyter_notebook"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "MIT",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Interactive quantum mechanics and materials notebooks. MIT reported."
@@ -180,7 +228,14 @@
       "content_format": [
         "jupyter_notebook"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "MIT",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Phase diagrams, Gibbs free energy, spinodal decomposition and chemical thermodynamics. MIT reported."
@@ -203,7 +258,14 @@
       "content_format": [
         "jupyter_book"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "code",
+          "license_name": "Apache-2.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Scientific Python and geoscience data workflows; Apache-2.0 reported. Not a dedicated climate textbook."
@@ -226,7 +288,14 @@
       "content_format": [
         "bookdown"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "text",
+          "license_name": "CC BY-SA 3.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Chapter-organized genetics OER; CC BY-SA 3.0 reported."
@@ -249,7 +318,20 @@
       "content_format": [
         "markdown"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "text",
+          "license_name": "CC BY 4.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        },
+        {
+          "scope": "code",
+          "license_name": "Apache-2.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Prior discovery reports 44 chapters, labs, assessments, glossary and references. Manuscript CC BY 4.0 and code Apache-2.0 reported."
@@ -272,7 +354,14 @@
       "content_format": [
         "jupyter_notebook"
       ],
-      "license_assertions": [],
+      "license_assertions": [
+        {
+          "scope": "text",
+          "license_name": "CC BY-SA 4.0",
+          "status": "reported",
+          "notes": "Previously identified in repository inspection; recheck current source license file and scope before relying on this assertion."
+        }
+      ],
       "record_status": "inspected",
       "notes": [
         "Interactive neuroscience modules using NWB datasets; CC BY-SA 4.0 reported."
