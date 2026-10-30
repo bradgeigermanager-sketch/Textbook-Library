@@ -28,6 +28,8 @@ The initial catalog covers physics, nuclear and accelerator physics, quantum mec
 ## Licensing note
 The repository's existing `LICENSE` is CC0 1.0. It applies only to contributions whose rights are held by the contributor and intentionally dedicated under CC0; it does not change the licenses of third-party works described in this catalog. See [Licensing](docs/LICENSING.md).
 
+See the [development roadmap](docs/ROADMAP.md) for completed foundations and prioritized next work.
+
 ## Status
 Initial registry scaffold. Catalog entries are discovery/inspection candidates, not legal or scientific certifications. See [Architecture](docs/ARCHITECTURE.md), [Ingestion](docs/INGESTION.md), [Licensing](docs/LICENSING.md), and [Contributing](CONTRIBUTING.md).
 
