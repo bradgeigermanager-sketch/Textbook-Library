@@ -92,6 +92,9 @@
       "items": {
         "type": "string"
       }
+    },
+    "canonical_term": {
+      "type": "string"
     }
   },
   "additionalProperties": false
