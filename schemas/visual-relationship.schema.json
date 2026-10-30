@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual Relationship Type",
+  "type": "object",
+  "required": [
+    "relationship_type_id",
+    "name",
+    "semantics"
+  ],
+  "properties": {
+    "relationship_type_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "semantics": {
+      "type": "string"
+    },
+    "directed": {
+      "type": "boolean"
+    },
+    "inverse_relationship": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_component_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_component_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attributes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
