@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Textbook Edition",
+  "type": "object",
+  "required": [
+    "edition_id",
+    "textbook_id",
+    "edition_label",
+    "edition_status"
+  ],
+  "properties": {
+    "edition_id": {
+      "type": "string"
+    },
+    "textbook_id": {
+      "type": "string"
+    },
+    "edition_label": {
+      "type": "string"
+    },
+    "publication_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "publisher": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isbn_10": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isbn_13": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "edition_status": {
+      "enum": [
+        "published",
+        "preprint",
+        "draft",
+        "unknown"
+      ]
+    },
+    "source_manifest_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes_edition_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
