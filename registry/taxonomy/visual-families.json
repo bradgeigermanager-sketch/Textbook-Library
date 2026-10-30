@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "families": [
+    {
+      "family_id": "VIS-STRUCTURAL",
+      "name": "Structural and assembly diagrams"
+    },
+    {
+      "family_id": "VIS-SPATIAL",
+      "name": "Spatial and geometric diagrams"
+    },
+    {
+      "family_id": "VIS-PROCESS",
+      "name": "Process and state diagrams"
+    },
+    {
+      "family_id": "VIS-NETWORK",
+      "name": "Networks and graphs"
+    },
+    {
+      "family_id": "VIS-QUANTITATIVE",
+      "name": "Quantitative plots and charts"
+    },
+    {
+      "family_id": "VIS-APPARATUS",
+      "name": "Scientific apparatus and experimental setups"
+    },
+    {
+      "family_id": "VIS-ELECTRICAL",
+      "name": "Electrical and electronic diagrams"
+    },
+    {
+      "family_id": "VIS-CHEMICAL",
+      "name": "Chemical structures and reaction diagrams"
+    },
+    {
+      "family_id": "VIS-BIOLOGICAL",
+      "name": "Biological and medical illustrations"
+    },
+    {
+      "family_id": "VIS-PHYSICAL",
+      "name": "Physical systems and interaction diagrams"
+    },
+    {
+      "family_id": "VIS-ENGINEERING",
+      "name": "Engineering drawings and system diagrams"
+    },
+    {
+      "family_id": "VIS-GEOLOGICAL",
+      "name": "Geological and Earth-science visuals"
+    },
+    {
+      "family_id": "VIS-CONCEPTUAL",
+      "name": "Conceptual and instructional diagrams"
+    }
+  ],
+  "notes": [
+    "Families are multi-label classifications, not mutually exclusive bins.",
+    "A visual instance may instantiate multiple generalized forms."
+  ]
+}
