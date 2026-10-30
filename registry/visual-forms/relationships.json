@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "relationships": [
+    {
+      "relationship_type_id": "VR-CONNECTS",
+      "name": "connects to",
+      "semantics": "A physical, electrical, or logical connection between components.",
+      "directed": false,
+      "inverse_relationship": "VR-CONNECTS",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "connection_type",
+        "strength",
+        "conductivity"
+      ]
+    },
+    {
+      "relationship_type_id": "VR-PRECEDES",
+      "name": "precedes",
+      "semantics": "One stage occurs before another in an ordered process.",
+      "directed": true,
+      "inverse_relationship": "VR-FOLLOWS",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "sequence_order",
+        "condition"
+      ]
+    },
+    {
+      "relationship_type_id": "VR-PART-OF",
+      "name": "part of",
+      "semantics": "One structure is a constituent of another structure.",
+      "directed": true,
+      "inverse_relationship": "VR-HAS-PART",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "part_whole_scope"
+      ]
+    },
+    {
+      "relationship_type_id": "VR-ACTS-ON",
+      "name": "acts on",
+      "semantics": "A force, field, agent, or operation acts upon a target.",
+      "directed": true,
+      "inverse_relationship": "VR-ACTED-ON-BY",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "magnitude",
+        "direction",
+        "unit",
+        "application_point"
+      ]
+    },
+    {
+      "relationship_type_id": "VR-MEASURES",
+      "name": "measures",
+      "semantics": "An instrument or sensor measures a property of a target.",
+      "directed": true,
+      "inverse_relationship": "VR-MEASURED-BY",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "measurand",
+        "unit",
+        "uncertainty"
+      ]
+    },
+    {
+      "relationship_type_id": "VR-TRANSFORMS",
+      "name": "transforms into",
+      "semantics": "A process or reaction converts an input entity into an output entity.",
+      "directed": true,
+      "inverse_relationship": "VR-TRANSFORMED-FROM",
+      "source_component_constraints": [],
+      "target_component_constraints": [],
+      "attributes": [
+        "conditions",
+        "yield",
+        "rate"
+      ]
+    }
+  ]
+}
