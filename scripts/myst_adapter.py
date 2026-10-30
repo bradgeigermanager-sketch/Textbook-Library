@@ -5,11 +5,11 @@ import argparse, hashlib, json, re
 from pathlib import Path
 
 VERSION = "0.1.0"
-HEADING = re.compile(r"^(#{1,6})\\s+(.+?)\\s*#*\\s*$")
-FENCE = re.compile(r"^\\s{0,3}(`{3,}|~{3,})(.*)$")
-IMAGE = re.compile(r"!\\[([^]]*)\\]\\(([^)]+)\\)")
-CITATION = re.compile(r"\\[@([^]]+)\\]")
-MATH_DELIM = re.compile(r"^\\s*\\$\\$\\s*$")
+HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
+FENCE = re.compile(r"^\s{0,3}(`{3,}|~{3,})(.*)$")
+IMAGE = re.compile(r"!\[([^]]*)\]\(([^)]+)\)")
+CITATION = re.compile(r"\[@([^]]+)\]")
+MATH_DELIM = re.compile(r"^\s*\$\$\s*$")
 
 def stable_id(*parts: str) -> str:
     return hashlib.sha256("::".join(parts).encode("utf-8")).hexdigest()[:24]
@@ -58,7 +58,7 @@ def parse_file(path: Path, root: Path, edition_id: str, node_order: int):
         nonlocal block_order
         if current_node is None:
             return
-        raw = "\\n".join(text)
+        raw = "\n".join(text)
         block_id = stable_id(edition_id, rel, str(start), str(block_order), kind)
         block = {"block_id": block_id, "parent_node_id": current_node["node_id"],
                  "block_type": kind, "order": block_order, "text": raw,
@@ -76,14 +76,14 @@ def parse_file(path: Path, root: Path, edition_id: str, node_order: int):
     def flush(end):
         nonlocal paragraph
         if paragraph:
-            txt = "\\n".join(paragraph)
-            kind = "list" if re.match(r"^\\s*(?:[-*+] |\\d+[.)] )", txt) else "paragraph"
+            txt = "\n".join(paragraph)
+            kind = "list" if re.match(r"^\s*(?:[-*+] |\d+[.)] )", txt) else "paragraph"
             emit(kind, paragraph, end-len(paragraph)+1, end)
             paragraph = []
 
     for n, line in enumerate(lines, 1):
         if in_fence:
-            if re.match(r"^\\s{0,3}" + re.escape(fence_mark[0]) + "{" + str(len(fence_mark)) + r",}\\s*$", line):
+            if re.match(r"^\s{0,3}" + re.escape(fence_mark[0]) + "{" + str(len(fence_mark)) + r",}\s*$", line):
                 emit("code", code_lines, code_start, n, language=code_lang or None)
                 in_fence = False
             else:
@@ -169,13 +169,13 @@ def main():
         except (OSError, UnicodeError) as exc:
             warnings.append(f"{path.relative_to(root)}: {exc}")
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    (args.output_dir / "chapter-nodes.json").write_text(json.dumps(all_nodes, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
-    (args.output_dir / "content-blocks.json").write_text(json.dumps(all_blocks, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
+    (args.output_dir / "chapter-nodes.json").write_text(json.dumps(all_nodes, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (args.output_dir / "content-blocks.json").write_text(json.dumps(all_blocks, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     report = {"edition_id": args.edition_id, "parser": "myst_adapter", "parser_version": VERSION,
               "files_discovered": len(files), "nodes_extracted": len(all_nodes),
               "blocks_extracted": len(all_blocks), "warnings": warnings,
               "toc_used": bool(toc)}
-    (args.output_dir / "ingestion-report.json").write_text(json.dumps(report, indent=2) + "\\n", encoding="utf-8")
+    (args.output_dir / "ingestion-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
     return 0 if not warnings else 2
 
