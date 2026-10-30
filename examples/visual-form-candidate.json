@@ -1,0 +1,22 @@
+{
+  "component_types": [
+    "x_axis",
+    "y_axis",
+    "data_series",
+    "data_point",
+    "legend"
+  ],
+  "relationship_types": [
+    "plotted_on_axis",
+    "belongs_to_series"
+  ],
+  "domains": [
+    "physics",
+    "mathematics"
+  ],
+  "required_component_types": [
+    "x_axis",
+    "y_axis",
+    "data_series"
+  ]
+}
