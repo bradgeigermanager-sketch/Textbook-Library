@@ -26,7 +26,8 @@
       "attributes": [
         "sequence_order",
         "condition"
-      ]
+      ],
+      "canonical_term": "precedes"
     },
     {
       "relationship_type_id": "VR-PART-OF",
@@ -69,7 +70,8 @@
         "measurand",
         "unit",
         "uncertainty"
-      ]
+      ],
+      "canonical_term": "measures"
     },
     {
       "relationship_type_id": "VR-TRANSFORMS",
